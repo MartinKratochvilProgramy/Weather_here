@@ -1,10 +1,12 @@
 if ("geolocation" in navigator) {
-  console.log("geolocation available");
+
   navigator.geolocation.getCurrentPosition(async (position) => {
+    // user allows to get location
+
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
 
-    // this sends data to the server
+    // send data to server
     data = { lat, lon };
     options = {
       method: "POST",
@@ -18,13 +20,18 @@ if ("geolocation" in navigator) {
     json = await response.json();
     console.log(json);
 
-    document.getElementById('location').innerText = json.data[0].city_name;
-    document.getElementById('temperature').innerText = json.minutely[0].temp + '°C';
-    document.getElementById('wind-spd').innerText = json.data[0].wind_spd.toFixed(1) + ' m/s';
+    // update output card
+    document.getElementById("location").innerText = json.data[0].city_name;
+    document.getElementById("temperature").innerText = json.minutely[0].temp + "°C";
+    document.getElementById("wind-spd").innerText = json.data[0].wind_spd.toFixed(1) + " m/s";
 
     
+  }, function() {
+    // user does not allow to get location
+    document.getElementById("location").innerText = "Unavailable";
+    document.getElementById("card").className = "card-error";
   });
 } else {
-  console.log("geolocation not available");
+  window.alert("Geolocation missing!");
 }
 

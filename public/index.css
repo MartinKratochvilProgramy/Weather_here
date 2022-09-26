@@ -15,6 +15,13 @@ p {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.card-error {
+    background-color: #d4a373;
+    padding: 25px 50px 50px 50px;
+    border-radius: 20px;
+    box-shadow: rgba(177, 84, 94, 1) 0px 7px 29px 0px;
+}
+
 .output-bold {
     font-weight: bold;
     font-size: 18px;
