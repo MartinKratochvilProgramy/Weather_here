@@ -1,0 +1,30 @@
+body {
+    background-color: #faedcd;
+    
+    padding: 20px;
+}
+p {
+    font-size: large;
+    margin: 10px 0 10px 0;
+}
+
+.card {
+    background-color: #d4a373;
+    padding: 25px 50px 50px 50px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.output-bold {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.weather-heading {
+    margin-bottom: 40px;
+}
+
+
+
+
