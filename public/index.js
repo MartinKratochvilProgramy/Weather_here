@@ -27,7 +27,7 @@ if ("geolocation" in navigator) {
 
     
   }, function() {
-    // user does not allow to get location
+    // user does not allow to get location - change card shadow to red
     document.getElementById("location").innerText = "Unavailable";
     document.getElementById("card").className = "card-error";
   });

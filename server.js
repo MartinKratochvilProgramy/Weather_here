@@ -9,7 +9,7 @@ app.use(express.json({ limit: "1mb" }));
 
 
 app.post("/weather", async (request, response) => {
-  // get data and append to database
+  // get location latitude and longitude and send back info about weather at that location
 
   const lat = request.body.lat;
   const lon = request.body.lon;
