@@ -1,5 +1,5 @@
 # Weather-API-app
-Find weather at your location - app uses Express Node.js web framework
+Display weather at your location, web app is built on RESTful API using Express.js
 
 # Install and run
 Install required Node.js modules by running:
